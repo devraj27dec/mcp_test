@@ -47,6 +47,12 @@ server.registerTool(
     }
 );
 
+
+app.get('/' , (req , res) => {
+    res.send('Welcome to the Demo MCP Server!');
+});
+
+
 const port = parseInt(process.env.PORT || '3000');
 app.listen(port, () => {
     console.log(`Demo MCP Server running on http://localhost:${port}/mcp`);
